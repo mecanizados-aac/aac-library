@@ -2,10 +2,20 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "paths": {
+      "aac-example": [
+        "dist/aac-example/aac-example",
+        "dist/aac-example"
+      ],
+      "aac-library": [
+        "dist/aac-library/aac-library",
+        "dist/aac-library"
+      ]
+    },
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
-    "strict": true,
+    "strict": false,
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,

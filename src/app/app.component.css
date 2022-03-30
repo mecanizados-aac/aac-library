@@ -1,0 +1,12 @@
+.showcase, .menu{
+    padding: 5px;
+}
+
+.menu{
+    border-bottom: 2px solid darkorchid;
+}
+
+.menu a{
+    text-decoration: none;
+    color: darkorchid;
+}

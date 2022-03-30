@@ -100,6 +100,68 @@
           }
         }
       }
+    },
+    "aac-example": {
+      "projectType": "library",
+      "root": "projects/aac-example",
+      "sourceRoot": "projects/aac-example/src",
+      "prefix": "aac",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/aac-example/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/aac-example/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/aac-example/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/aac-example/src/test.ts",
+            "tsConfig": "projects/aac-example/tsconfig.spec.json",
+            "karmaConfig": "projects/aac-example/karma.conf.js"
+          }
+        }
+      }
+    },
+    "aac-library": {
+      "projectType": "library",
+      "root": "projects/aac-library",
+      "sourceRoot": "projects/aac-library/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/aac-library/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/aac-library/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/aac-library/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/aac-library/src/test.ts",
+            "tsConfig": "projects/aac-library/tsconfig.spec.json",
+            "karmaConfig": "projects/aac-library/karma.conf.js"
+          }
+        }
+      }
     }
   },
   "defaultProject": "library-aac"
